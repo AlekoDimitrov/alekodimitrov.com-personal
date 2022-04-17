@@ -17,7 +17,6 @@ const Navbar = () => {
   };
   return (
     <div>
-      {navigation === 1 && <MobileNavigation />}
       <AppBar>
         <Toolbar>
           <Box
@@ -49,6 +48,11 @@ const Navbar = () => {
           </Box>
         </Toolbar>
       </AppBar>
+      {navigation === 1 ? (
+        <MobileNavigation isOpen={true} />
+      ) : (
+        <MobileNavigation isOpen={false} />
+      )}
     </div>
   );
 };
