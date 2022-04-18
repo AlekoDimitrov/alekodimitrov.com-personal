@@ -1,18 +1,21 @@
-import { AppBar, IconButton, Toolbar } from "@mui/material";
+import { AppBar, IconButton, SvgIcon, Toolbar } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import React, { useState } from "react";
 import { Box, height, width } from "@mui/system";
 import MobileNavigation from "./MobileNavigation";
 import { motion } from "framer-motion";
+import LogoSvg from "!@svgr/webpack!../../public/alekodimitrov-logo.svg";
+import styled from "@emotion/styled";
+import Link from "next/link";
 
 const Navbar = () => {
-  const [navigation, setNavigation] = useState(0);
+  const [navigation, setNavigation] = useState<boolean>(false);
   const setNavigationState = () => {
-    if (navigation === 1) {
-      setNavigation((navigation = 0));
+    if (navigation === true) {
+      setNavigation(false);
     } else {
-      setNavigation((navigation = 1));
+      setNavigation(true);
     }
   };
   return (
@@ -27,10 +30,31 @@ const Navbar = () => {
               alignItems: "center",
             }}
           >
-            <h1>AD</h1>
-            <Box onClick={setNavigationState}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                flex: 1,
+              }}
+            >
+              <Link href="#">
+                <a>
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                    <LogoSvg />
+                    <h4>Aleko Dimitrov</h4>
+                  </Box>
+                </a>
+              </Link>
+            </Box>
+
+            <Box
+              onClick={setNavigationState}
+              sx={{
+                flex: 1,
+              }}
+            >
               <motion.div
-                style={{ display: "flex" }}
+                style={{ display: "flex", justifyContent: "flex-end" }}
                 whileTap={{
                   scale: 0,
                   opacity: 0,
@@ -39,16 +63,16 @@ const Navbar = () => {
                 <IconButton
                   color="inherit"
                   aria-label="menu"
-                  sx={{ padding: "0", width: "100%", height: "100%" }}
+                  sx={{ padding: "0" }}
                 >
-                  {navigation === 1 ? <CloseIcon /> : <MenuIcon />}
+                  {navigation === true ? <CloseIcon /> : <MenuIcon />}
                 </IconButton>
               </motion.div>
             </Box>
           </Box>
         </Toolbar>
       </AppBar>
-      {navigation === 1 ? (
+      {navigation === true ? (
         <MobileNavigation isOpen={true} />
       ) : (
         <MobileNavigation isOpen={false} />
