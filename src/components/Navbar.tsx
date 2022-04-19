@@ -47,12 +47,7 @@ const Navbar = () => {
               </Link>
             </Box>
 
-            <Box
-              onClick={setNavigationState}
-              sx={{
-                flex: 1,
-              }}
-            >
+            <Box onClick={setNavigationState}>
               <motion.div
                 style={{ display: "flex", justifyContent: "flex-end" }}
                 whileTap={{
@@ -60,11 +55,7 @@ const Navbar = () => {
                   opacity: 0,
                 }}
               >
-                <IconButton
-                  color="inherit"
-                  aria-label="menu"
-                  sx={{ padding: "0" }}
-                >
+                <IconButton color="inherit" aria-label="menu">
                   {navigation === true ? <CloseIcon /> : <MenuIcon />}
                 </IconButton>
               </motion.div>
