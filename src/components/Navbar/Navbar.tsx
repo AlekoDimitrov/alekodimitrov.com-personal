@@ -5,8 +5,7 @@ import React, { useState } from "react";
 import { Box, height, width } from "@mui/system";
 import MobileNavigation from "./MobileNavigation";
 import { motion } from "framer-motion";
-import LogoSvg from "!@svgr/webpack!../../public/alekodimitrov-logo.svg";
-import styled from "@emotion/styled";
+import LogoSvg from "!@svgr/webpack!../../../public/alekodimitrov-logo.svg";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -19,7 +18,7 @@ const Navbar = () => {
     }
   };
   return (
-    <div>
+    <Box height={65}>
       <AppBar>
         <Toolbar>
           <Box
@@ -63,12 +62,13 @@ const Navbar = () => {
           </Box>
         </Toolbar>
       </AppBar>
+
       {navigation === true ? (
         <MobileNavigation isOpen={true} />
       ) : (
         <MobileNavigation isOpen={false} />
       )}
-    </div>
+    </Box>
   );
 };
 
