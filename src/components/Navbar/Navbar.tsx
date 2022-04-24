@@ -16,7 +16,7 @@ const Navbar = (props: any) => {
   };
   return (
     <Box>
-      <AppBar color="secondary">
+      <AppBar color="primary">
         <Toolbar>
           <Box
             sx={{

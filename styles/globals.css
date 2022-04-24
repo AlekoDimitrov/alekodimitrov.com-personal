@@ -42,3 +42,35 @@ p {
   align-items: center;
   color: rgb(155, 155, 155);
 }
+
+.latestPostsH3 {
+  color: black;
+  margin: 0;
+}
+
+.latestPostsP {
+  font-size: 0.9rem;
+}
+.latestPostsDIV {
+  padding: 10px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: rgb(155, 155, 155);
+  margin: 25px 0px;
+  border-radius: 20px;
+}
+
+.readMore {
+  margin-right: 10px;
+}
+
+.latestPostsMOTIONDIV {
+  display: flex;
+}
+
+.footerListItems {
+  padding: 0;
+  margin-bottom: 20px;
+}

@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import zIndex from "@mui/material/styles/zIndex";
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const mobileNavLinks = [
   { id: 1, href: "#", text: "Home" },

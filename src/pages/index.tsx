@@ -9,24 +9,37 @@ import { useState } from "react";
 import MobileNavigation from "../components/Navbar/MobileNavigation";
 import { AnimatePresence } from "framer-motion";
 import LatestPosts from "../components/LatestPosts/LatestPosts";
+import Footer from "../components/Footer/Footer";
 
-const theme = createTheme({});
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#781e86",
+    },
+    secondary: {
+      main: "#5827b0",
+    },
+  },
+});
 
 const Home: NextPage = () => {
   const [mobileNavigation, setMobileNavigation] = useState<boolean>(false);
 
   return (
-    <>
-      <Navbar
-        setMobileNavigation={setMobileNavigation}
-        mobileNavigation={mobileNavigation}
-      />
-      <AnimatePresence>
-        {mobileNavigation === true && <MobileNavigation />}
-      </AnimatePresence>
-      <Hero />
-      <LatestPosts />
-    </>
+    <ThemeProvider theme={theme}>
+      <>
+        <Navbar
+          setMobileNavigation={setMobileNavigation}
+          mobileNavigation={mobileNavigation}
+        />
+        <AnimatePresence>
+          {mobileNavigation === true && <MobileNavigation />}
+        </AnimatePresence>
+        <Hero />
+        <LatestPosts />
+        <Footer />
+      </>
+    </ThemeProvider>
   );
 };
 
