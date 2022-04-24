@@ -14,13 +14,13 @@
     "@emotion/styled": "^11.8.1",
     "@fontsource/roboto": "^4.5.5",
     "@mdx-js/loader": "^2.1.1",
-    "@mui/icons-material": "^5.6.1",
     "@mui/material": "^5.6.1",
     "@next/mdx": "^12.1.5",
     "framer-motion": "^6.3.0",
     "next": "12.1.5",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",

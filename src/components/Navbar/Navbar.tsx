@@ -1,6 +1,6 @@
 import { AppBar, IconButton, SvgIcon, Toolbar } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
+import { HiMenuAlt4 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 import React, { useState } from "react";
 import { Box, height, width } from "@mui/system";
 import MobileNavigation from "./MobileNavigation";
@@ -8,18 +8,15 @@ import { motion } from "framer-motion";
 import LogoSvg from "!@svgr/webpack!../../../public/alekodimitrov-logo.svg";
 import Link from "next/link";
 
-const Navbar = () => {
-  const [navigation, setNavigation] = useState<boolean>(false);
+const Navbar = (props: any) => {
   const setNavigationState = () => {
-    if (navigation === true) {
-      setNavigation(false);
-    } else {
-      setNavigation(true);
-    }
+    props.mobileNavigation === false
+      ? props.setMobileNavigation(true)
+      : props.setMobileNavigation(false);
   };
   return (
-    <Box height={65}>
-      <AppBar>
+    <Box>
+      <AppBar color="secondary">
         <Toolbar>
           <Box
             sx={{
@@ -38,10 +35,7 @@ const Navbar = () => {
             >
               <Link href="#">
                 <a>
-                  <Box sx={{ display: "flex", alignItems: "center" }}>
-                    <LogoSvg />
-                    <h4>Aleko Dimitrov</h4>
-                  </Box>
+                  <LogoSvg />
                 </a>
               </Link>
             </Box>
@@ -50,24 +44,18 @@ const Navbar = () => {
               <motion.div
                 style={{ display: "flex", justifyContent: "flex-end" }}
                 whileTap={{
-                  scale: 0,
-                  opacity: 0,
+                  scale: 0.5,
+                  opacity: 0.5,
                 }}
               >
                 <IconButton color="inherit" aria-label="menu">
-                  {navigation === true ? <CloseIcon /> : <MenuIcon />}
+                  {props.mobileNavigation ? <IoClose /> : <HiMenuAlt4 />}
                 </IconButton>
               </motion.div>
             </Box>
           </Box>
         </Toolbar>
       </AppBar>
-
-      {navigation === true ? (
-        <MobileNavigation isOpen={true} />
-      ) : (
-        <MobileNavigation isOpen={false} />
-      )}
     </Box>
   );
 };

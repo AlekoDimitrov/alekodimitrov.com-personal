@@ -12,9 +12,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const mobileNavLinks = [
   { id: 1, href: "#", text: "Home" },
-  { id: 2, href: "#", text: "About" },
-  { id: 3, href: "#", text: "Projects" },
-  { id: 4, href: "#", text: "Contacts" },
+  { id: 2, href: "#", text: "Blog" },
+  { id: 3, href: "#", text: "About" },
+  { id: 4, href: "#", text: "Projects" },
+  { id: 5, href: "#", text: "Contacts" },
 ];
 
 const variants = {
@@ -40,60 +41,48 @@ const childVariants = {
 
 const MobileNavigation = (props: any) => {
   return (
-    <AnimatePresence>
-      {props.isOpen === true && (
-        <Box position="absolute" overflow={"hidden"} maxWidth={"100%"}>
-          <motion.div
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
+    <Box>
+      <Box position="fixed" zIndex={1} top={0}>
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+        >
+          <Box
+            sx={{
+              display: "flex",
+              backgroundColor: "#380e40",
+              width: "100vw",
+              height: "100vh",
+              alignItems: "center",
+            }}
           >
             <Box
               sx={{
-                display: "flex",
-                backgroundColor: "#1976d2",
-                width: "100vw",
-                height: "100vh",
-                alignItems: "center",
+                color: "whitesmoke",
+                width: "80%",
               }}
             >
-              <Box
-                sx={{
-                  color: "whitesmoke",
-                  width: "80%",
-                }}
-              >
-                <ul>
-                  {mobileNavLinks.map((link) => {
-                    return (
-                      <motion.div key={link.id} variants={childVariants}>
-                        <ListItem>
-                          <Link
-                            href={link.href}
-                            underline="none"
-                            color={"#ffff"}
-                          >
-                            <h4>{link.text}</h4>
-                          </Link>
-                        </ListItem>
-                        <Divider />
-                      </motion.div>
-                    );
-                  })}
-                  {/* <ListItem>
-                    <Link href="#" underline="none" color={"#ffff"}>
-                      <h4>Home</h4>
-                    </Link>
-                  </ListItem>
-                  <Divider /> */}
-                </ul>
-              </Box>
+              <ul>
+                {mobileNavLinks.map((link) => {
+                  return (
+                    <motion.div key={link.id} variants={childVariants}>
+                      <ListItem>
+                        <Link href={link.href} underline="none" color={"#ffff"}>
+                          <h4>{link.text}</h4>
+                        </Link>
+                      </ListItem>
+                      <Divider />
+                    </motion.div>
+                  );
+                })}
+              </ul>
             </Box>
-          </motion.div>
-        </Box>
-      )}
-    </AnimatePresence>
+          </Box>
+        </motion.div>
+      </Box>
+    </Box>
   );
 };
 

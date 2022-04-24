@@ -5,6 +5,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+body {
+  min-height: 100%;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -12,4 +16,29 @@ a {
 
 * {
   box-sizing: border-box;
+}
+h1,
+p {
+  margin: 0;
+}
+
+.heroP {
+  color: rgb(155, 155, 155);
+  font-size: 0.9rem;
+}
+
+.heroH2 {
+  border-style: solid;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  border-bottom: 4px solid;
+  border-image: linear-gradient(to right, rgb(73, 73, 170), #9c27b0) 1;
+  max-width: fit-content;
+}
+
+.heroH4 {
+  display: flex;
+  align-items: center;
+  color: rgb(155, 155, 155);
 }
