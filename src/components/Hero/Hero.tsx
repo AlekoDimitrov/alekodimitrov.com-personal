@@ -1,18 +1,38 @@
 import React from "react";
-import { Avatar } from "@mui/material";
+import { Avatar, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 const Hero = () => {
   return (
     <>
       <Box padding={3} mt={8}>
-        <h1>Aleko Dimitrov,</h1>
-        <p>developer for the web.</p>
-        <Avatar
-          alt="Aleko Dimitrov"
-          src="./aleko-avatar.jpg"
-          sx={{ width: 80, height: 80, marginTop: 5, marginBottom: 3 }}
-        ></Avatar>
+        <Box
+          sx={{
+            display: { sm: "flex" },
+            justifyContent: { sm: "space-between" },
+          }}
+        >
+          <Box
+            sx={{
+              display: { sm: "flex" },
+              flexDirection: { sm: "column" },
+              justifyContent: { sm: "center" },
+            }}
+          >
+            <Typography variant="h1">Aleko Dimitrov,</Typography>
+            <Typography variant="body1">developer for the web.</Typography>
+          </Box>
+          <Avatar
+            alt="Aleko Dimitrov"
+            src="./aleko-avatar.jpg"
+            sx={{
+              width: { xs: 90, sm: 120 },
+              height: { xs: 90, sm: 120 },
+              marginTop: 5,
+              marginBottom: 3,
+            }}
+          ></Avatar>
+        </Box>
         <Box
           sx={{
             backgroundColor: "#380e40",

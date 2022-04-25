@@ -40,7 +40,10 @@ const Navbar = (props: any) => {
               </Link>
             </Box>
 
-            <Box onClick={setNavigationState}>
+            <Box
+              onClick={setNavigationState}
+              sx={{ display: { xs: "block", sm: "none" } }}
+            >
               <motion.div
                 style={{ display: "flex", justifyContent: "flex-end" }}
                 whileTap={{
