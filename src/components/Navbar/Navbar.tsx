@@ -1,4 +1,10 @@
-import { AppBar, IconButton, SvgIcon, Toolbar } from "@mui/material";
+import {
+  AppBar,
+  IconButton,
+  SvgIcon,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import React, { useState } from "react";
@@ -15,51 +21,75 @@ const Navbar = (props: any) => {
       : props.setMobileNavigation(false);
   };
   return (
-    <Box>
-      <AppBar color="primary">
-        <Toolbar>
+    <AppBar
+      className="appBar"
+      color="transparent"
+      elevation={0}
+      sx={{
+        position: { sm: "absolute" },
+        backgroundColor: { sm: "transparent", xs: "purple" },
+      }}
+    >
+      <Toolbar>
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <Box
             sx={{
-              width: "100%",
               display: "flex",
-              justifyContent: "space-between",
               alignItems: "center",
+              flex: 1,
             }}
           >
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                flex: 1,
+            <Link href="#">
+              <a>
+                <LogoSvg className="logoSvg" />
+              </a>
+            </Link>
+          </Box>
+          <Typography variant="h7" className="navbarH7">
+            <a href={"#"}>Home</a>
+          </Typography>
+          <Typography variant="h7" className="navbarH7">
+            <a href={"#"}>Blog</a>
+          </Typography>
+          <Typography variant="h7" className="navbarH7">
+            <a href={"#"}>About</a>
+          </Typography>
+          <Typography variant="h7" className="navbarH7">
+            <a href={"#"}>Projects</a>
+          </Typography>
+          <Typography variant="h7" className="navbarH7">
+            <a href={"#"}>Contacts</a>
+          </Typography>
+          <Box
+            onClick={setNavigationState}
+            sx={{ display: { xs: "block", sm: "none" } }}
+          >
+            <motion.div
+              style={{ display: "flex", justifyContent: "flex-end" }}
+              whileTap={{
+                scale: 0.5,
+                opacity: 0.5,
               }}
             >
-              <Link href="#">
-                <a>
-                  <LogoSvg />
-                </a>
-              </Link>
-            </Box>
-
-            <Box
-              onClick={setNavigationState}
-              sx={{ display: { xs: "block", sm: "none" } }}
-            >
-              <motion.div
-                style={{ display: "flex", justifyContent: "flex-end" }}
-                whileTap={{
-                  scale: 0.5,
-                  opacity: 0.5,
-                }}
-              >
-                <IconButton color="inherit" aria-label="menu">
-                  {props.mobileNavigation ? <IoClose /> : <HiMenuAlt4 />}
-                </IconButton>
-              </motion.div>
-            </Box>
+              <IconButton color="inherit" aria-label="menu">
+                {props.mobileNavigation ? (
+                  <IoClose color="white" />
+                ) : (
+                  <HiMenuAlt4 color="white" />
+                )}
+              </IconButton>
+            </motion.div>
           </Box>
-        </Toolbar>
-      </AppBar>
-    </Box>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
 

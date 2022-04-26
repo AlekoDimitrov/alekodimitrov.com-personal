@@ -42,7 +42,7 @@ const Home: NextPage = () => {
   return (
     <ThemeProvider theme={theme}>
       <Box display={"flex"} justifyContent={"center"}>
-        <Box width={768}>
+        <Box maxWidth={768}>
           <Navbar
             setMobileNavigation={setMobileNavigation}
             mobileNavigation={mobileNavigation}

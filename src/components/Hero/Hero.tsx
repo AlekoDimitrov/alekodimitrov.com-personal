@@ -28,7 +28,7 @@ const Hero = () => {
             sx={{
               width: { xs: 90, sm: 120 },
               height: { xs: 90, sm: 120 },
-              marginTop: 5,
+              marginTop: 3,
               marginBottom: 3,
             }}
           ></Avatar>

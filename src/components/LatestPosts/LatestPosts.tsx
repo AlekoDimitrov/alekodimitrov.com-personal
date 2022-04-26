@@ -9,7 +9,7 @@ const blogVariants = {
   },
   whileHover: {
     scale: 1.01,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#f9f9f9",
   },
 };
 
