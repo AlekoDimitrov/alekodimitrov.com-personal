@@ -109,4 +109,7 @@ p {
   .navbarH7 {
     display: block;
   }
+  .heroP {
+    font-size: 1rem;
+  }
 }

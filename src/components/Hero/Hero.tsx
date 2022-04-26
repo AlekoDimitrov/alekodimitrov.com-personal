@@ -43,13 +43,18 @@ const Hero = () => {
         >
           <h2 className="heroH2">👋,</h2>
           <p className="heroP">
-            I'm a front-end developer based in Bulgaria. My passion is to build
-            web applications by following proven industry principles and through
-            experimentation and tinkering.
+            I create authentic and functional web applications by following
+            industry-set principles and experimenting my way through to the
+            finished product. I also enjoy blogging, but I usually write about
+            subjects I want to understand better. Here, you will find my
+            summarized efforts in trying to grasp everything from web
+            technologies and cryptography to philosophy and economics.
           </p>
           <h2 className="heroH2">I ❤️</h2>
           <Box display={"flex"} alignItems={"center"} color="rgb(87, 87, 87)">
-            <p className="heroH4">Ethereum, Linux, FOSS, zero-knowledge</p>
+            <p className="heroH4">
+              Ethereum, Linux, FOSS, zero-knowledge, DeFi, less web bloat
+            </p>
           </Box>
         </Box>
       </Box>
