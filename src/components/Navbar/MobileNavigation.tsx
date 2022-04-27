@@ -1,18 +1,10 @@
-import {
-  Box,
-  Divider,
-  Link,
-  List,
-  ListItem,
-  ListItemText,
-} from "@mui/material";
-import zIndex from "@mui/material/styles/zIndex";
+import { Box, Divider, Link, ListItem } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
 
 const mobileNavLinks = [
   { id: 1, href: "#", text: "Home" },
-  { id: 2, href: "#", text: "Blog" },
+  { id: 2, href: "blog", text: "Blog" },
   { id: 3, href: "#", text: "About" },
   { id: 4, href: "#", text: "Projects" },
   { id: 5, href: "#", text: "Contacts" },
@@ -50,6 +42,7 @@ const MobileNavigation = (props: any) => {
           exit="hidden"
         >
           <Box
+            overflow="auto"
             sx={{
               display: "flex",
               backgroundColor: "#380e40",
@@ -61,6 +54,7 @@ const MobileNavigation = (props: any) => {
             <Box
               sx={{
                 color: "whitesmoke",
+                height: "60%",
                 width: "80%",
               }}
             >

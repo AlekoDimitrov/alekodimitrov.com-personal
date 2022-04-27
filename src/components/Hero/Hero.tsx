@@ -46,9 +46,9 @@ const Hero = () => {
             I create authentic and functional web applications by following
             industry-set principles and experimenting my way through to the
             finished product. I also enjoy blogging, but I usually write about
-            subjects I want to understand better. Here, you will find my
-            summarized efforts in trying to grasp everything from web
-            technologies and cryptography to philosophy and economics.
+            subjects I want to understand better. Here, you can find my
+            summarized efforts trying to grasp everything from web technologies
+            and cryptography to philosophy and economics.
           </p>
           <h2 className="heroH2">I ❤️</h2>
           <Box display={"flex"} alignItems={"center"} color="rgb(87, 87, 87)">
