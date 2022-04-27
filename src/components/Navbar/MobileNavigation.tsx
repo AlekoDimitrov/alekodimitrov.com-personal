@@ -34,7 +34,7 @@ const childVariants = {
 const MobileNavigation = (props: any) => {
   return (
     <Box>
-      <Box position="fixed" zIndex={1} top={0}>
+      <Box position="fixed" zIndex={1} top={0} left={0}>
         <motion.div
           variants={variants}
           initial="hidden"
