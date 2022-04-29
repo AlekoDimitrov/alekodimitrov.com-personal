@@ -1,15 +1,8 @@
-import {
-  AppBar,
-  IconButton,
-  SvgIcon,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, IconButton, Toolbar } from "@mui/material";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import React, { useState } from "react";
-import { Box, height, width } from "@mui/system";
-import MobileNavigation from "./MobileNavigation";
+import React from "react";
+import { Box } from "@mui/system";
 import { motion } from "framer-motion";
 import LogoSvg from "!@svgr/webpack!../../public/alekodimitrov-logo.svg";
 import Link from "next/link";
@@ -27,7 +20,7 @@ const Navbar = (props: any) => {
       elevation={0}
       sx={{
         position: { sm: "absolute" },
-        backgroundColor: { sm: "transparent", xs: "purple" },
+        backgroundColor: { sm: "transparent", xs: "#5d176a" },
       }}
     >
       <Toolbar>
