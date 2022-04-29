@@ -87,9 +87,9 @@ p {
   margin-top: 4px;
 }
 
-.navbarH7 {
-  margin-top: 7px;
-  flex: 1;
+.navbarA {
+  margin-top: 9px;
+  flex: 7;
   display: none;
 }
 
@@ -110,8 +110,9 @@ p {
     margin-top: 15px;
     fill: black;
   }
-  .navbarH7 {
-    display: block;
+  .navbarA {
+    display: flex;
+    justify-content: space-between;
   }
   .heroP {
     font-size: 1rem;

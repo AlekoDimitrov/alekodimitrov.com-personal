@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Navbar from "../components/Navbar/Navbar";
-import Hero from "../components/Hero/Hero";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
 import { Box, createTheme, ThemeProvider } from "@mui/material";
 import { useState } from "react";
-import MobileNavigation from "../components/Navbar/MobileNavigation";
+import MobileNavigation from "../components/MobileNavigation";
 import { AnimatePresence } from "framer-motion";
-import LatestPosts from "../components/LatestPosts/LatestPosts";
-import Footer from "../components/Footer/Footer";
+import LatestPosts from "../components/LatestPosts";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (

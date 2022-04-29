@@ -2,8 +2,8 @@ import "../../styles/globals.css";
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import { Box } from "@mui/system";
-import Navbar from "../components/Navbar/Navbar";
-import MobileNavigation from "../components/Navbar/MobileNavigation";
+import Navbar from "../components/Navbar";
+import MobileNavigation from "../components/MobileNavigation";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { createTheme, ThemeProvider } from "@mui/material";
@@ -30,6 +30,13 @@ theme.typography.body1 = {
   fontSize: "1.2rem",
   [theme.breakpoints.up("sm")]: {
     fontSize: "1.4rem",
+  },
+};
+
+theme.typography.body2 = {
+  fontSize: "1rem",
+  [theme.breakpoints.up("sm")]: {
+    fontSize: "1.2rem",
   },
 };
 
@@ -62,8 +69,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name="msapplication-TileColor" content="#9f00a7" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
+
         <Box display={"flex"} justifyContent={"center"}>
-          <Box maxWidth={768}>
+          <Box maxWidth={768} width={768}>
             <Navbar
               setMobileNavigation={setMobileNavigation}
               mobileNavigation={mobileNavigation}

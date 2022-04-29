@@ -11,7 +11,7 @@ import React, { useState } from "react";
 import { Box, height, width } from "@mui/system";
 import MobileNavigation from "./MobileNavigation";
 import { motion } from "framer-motion";
-import LogoSvg from "!@svgr/webpack!../../../public/alekodimitrov-logo.svg";
+import LogoSvg from "!@svgr/webpack!../../public/alekodimitrov-logo.svg";
 import Link from "next/link";
 
 const Navbar = (props: any) => {
@@ -52,21 +52,13 @@ const Navbar = (props: any) => {
               </a>
             </Link>
           </Box>
-          <Typography variant="h7" className="navbarH7">
+          <Box className={"navbarA"}>
             <a href={"#"}>Home</a>
-          </Typography>
-          <Typography variant="h7" className="navbarH7">
             <a href={"#"}>Blog</a>
-          </Typography>
-          <Typography variant="h7" className="navbarH7">
             <a href={"#"}>About</a>
-          </Typography>
-          <Typography variant="h7" className="navbarH7">
             <a href={"#"}>Projects</a>
-          </Typography>
-          <Typography variant="h7" className="navbarH7">
             <a href={"#"}>Contacts</a>
-          </Typography>
+          </Box>
           <Box
             onClick={setNavigationState}
             sx={{ display: { xs: "block", sm: "none" } }}
