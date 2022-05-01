@@ -36,21 +36,31 @@ const Navbar = (props: any) => {
             sx={{
               display: "flex",
               alignItems: "center",
-              flex: 1,
+              flex: 1.3,
             }}
           >
-            <Link href="#">
+            <Link href="/">
               <a>
                 <LogoSvg className="logoSvg" />
               </a>
             </Link>
           </Box>
           <Box className={"navbarA"}>
-            <a href={"#"}>Home</a>
-            <a href={"#"}>Blog</a>
-            <a href={"#"}>About</a>
-            <a href={"#"}>Projects</a>
-            <a href={"#"}>Contacts</a>
+            <a href={"/"} className={"navbarTagText"}>
+              Home
+            </a>
+            <a href={"/articles"} className={"navbarTagText"}>
+              Blog
+            </a>
+            <a href={"/about"} className={"navbarTagText"}>
+              About
+            </a>
+            <a href={"/projects"} className={"navbarTagText"}>
+              Projects
+            </a>
+            <a href={"/contacts"} className={"navbarTagText"}>
+              Contacts
+            </a>
           </Box>
           <Box
             onClick={setNavigationState}

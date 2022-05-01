@@ -1,7 +1,8 @@
 import { Box, Divider, Link } from "@mui/material";
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import React from "react";
+import { motion } from "framer-motion";
+import blogsMeta from "../blogData";
 
 const blogVariants = {
   initial: {
@@ -14,80 +15,44 @@ const blogVariants = {
 };
 
 const LatestPosts = () => {
+  let key = 0;
   return (
     <>
-      <Box padding={3}>
+      <Box padding="30px">
         <h2>Latest Posts</h2>
-        <Link href={"#"} underline={"none"}>
-          <motion.div
-            className="latestPostsDIV"
-            variants={blogVariants}
-            initial="initial"
-            whileHover="whileHover"
-          >
-            <h3 className="latestPostsH3">
-              Creating and Using API Routes in NextJS.
-            </h3>
-            <Box display={"flex"} justifyContent={"space-between"} pr={"20px"}>
-              <p className="latestPostsP">2 months ago</p>
-              <p className="latestPostsP">2 min read</p>
-            </Box>
-            <p className="latestPostsP">
-              How to create and use API routes in NextJS
-            </p>
-          </motion.div>
-        </Link>
-        <Link href={"#"} underline={"none"}>
-          <motion.div
-            className="latestPostsDIV"
-            variants={blogVariants}
-            initial="initial"
-            whileHover="whileHover"
-          >
-            <h3 className="latestPostsH3">
-              Creating and Using API Routes in NextJS.
-            </h3>
-            <Box display={"flex"} justifyContent={"space-between"} pr={"20px"}>
-              <p className="latestPostsP">2 months ago</p>
-              <p className="latestPostsP">2 min read</p>
-            </Box>
-            <p className="latestPostsP">
-              How to create and use API routes in NextJS
-            </p>
-          </motion.div>
-        </Link>
-        <Link href={"#"} underline={"none"}>
-          <motion.div
-            className="latestPostsDIV"
-            variants={blogVariants}
-            initial="initial"
-            whileHover="whileHover"
-          >
-            <h3 className="latestPostsH3">
-              Using NextJS Server-Side Rendering Method.
-            </h3>
-            <Box display={"flex"} justifyContent={"space-between"} pr={"20px"}>
-              <p className="latestPostsP">2 months ago</p>
-              <p className="latestPostsP">2 min read</p>
-            </Box>
-            <p className="latestPostsP">
-              How to create and use API routes in NextJS
-            </p>
-          </motion.div>
-        </Link>
-        <Box padding={"10px"}>
-          <Link href="#" color={"#00000"}>
-            <Box display={"flex"} justifyContent={"flex-end"}>
+        {blogsMeta.map((blog) => {
+          key += 1;
+          return (
+            <Link href={blog.slug} underline="none" key={key}>
               <motion.div
-                className="latestPostsMOTIONDIV"
-                whileHover={{ color: "#9c27b0" }}
+                className="latestPostsDIV"
+                variants={blogVariants}
+                initial="initial"
+                whileHover="whileHover"
               >
-                <p className="readMore">Read More</p>
-                <AiOutlineArrowRight />
+                <h3 className="latestPostsTitle">{blog.title}</h3>
+                <Box display={"flex"} justifyContent={"space-between"}>
+                  <p className="latestPostsP">2 months ago</p>
+                  <p className="latestPostsP">2 min read</p>
+                </Box>
+                <p className="latestPostsP">{blog.description}</p>
               </motion.div>
-            </Box>
-          </Link>
-        </Box>
+            </Link>
+          );
+        })}
+
+        <Link href="#" color={"#00000"}>
+          <Box display={"flex"} justifyContent={"flex-end"} padding="10px">
+            <motion.div
+              className="latestPostsMOTIONDIV"
+              whileHover={{ color: "#9c27b0" }}
+            >
+              <p className="readMore">Read More</p>
+              <AiOutlineArrowRight />
+            </motion.div>
+          </Box>
+        </Link>
+
         <Divider />
       </Box>
     </>

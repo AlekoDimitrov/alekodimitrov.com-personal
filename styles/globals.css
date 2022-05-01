@@ -43,13 +43,14 @@ p {
   color: rgb(155, 155, 155);
 }
 
-.latestPostsH3 {
+.latestPostsTitle {
   color: black;
   margin: 0;
 }
 
 .latestPostsP {
   font-size: 0.9rem;
+  padding: 2px;
 }
 .latestPostsDIV {
   padding: 10px;
@@ -85,6 +86,11 @@ p {
 .logoSvg {
   fill: white;
   margin-top: 4px;
+}
+
+.navbarTagText {
+  font-size: 15px;
+  color: rgb(82, 82, 82);
 }
 
 .navbarA {

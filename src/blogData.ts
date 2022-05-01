@@ -1,7 +1,20 @@
 export default [
   {
     date: "",
-    slug: "how-when-why-fire",
-    title: "Keeping it Simple: How, When, and Why to FIRE",
+    slug: "sampleBlog",
+    title: "Sample Blog",
+    description: "Lorem Ipsum",
+  },
+  {
+    date: "",
+    slug: "sampleBogle",
+    title: "Sample Bogle",
+    description: "Lorem Ipsum Lorem Ipsum",
+  },
+  {
+    date: "",
+    slug: "jackGoogle",
+    title: "Jack Google",
+    description: "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
   },
 ];

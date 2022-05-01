@@ -3,11 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const mobileNavLinks = [
-  { id: 1, href: "#", text: "Home" },
-  { id: 2, href: "blog", text: "Blog" },
-  { id: 3, href: "#", text: "About" },
-  { id: 4, href: "#", text: "Projects" },
-  { id: 5, href: "#", text: "Contacts" },
+  { id: 1, href: "/", text: "Home" },
+  { id: 2, href: "/articles", text: "Blog" },
+  { id: 3, href: "/about", text: "About" },
+  { id: 4, href: "/projects", text: "Projects" },
+  { id: 5, href: "/contacts", text: "Contacts" },
 ];
 
 const variants = {
@@ -34,7 +34,13 @@ const childVariants = {
 const MobileNavigation = (props: any) => {
   return (
     <Box>
-      <Box position="fixed" zIndex={1} top={0} left={0}>
+      <Box
+        position="fixed"
+        zIndex={1}
+        top={0}
+        left={0}
+        display={{ sm: "none" }}
+      >
         <motion.div
           variants={variants}
           initial="hidden"
@@ -67,7 +73,7 @@ const MobileNavigation = (props: any) => {
                           <h4>{link.text}</h4>
                         </Link>
                       </ListItem>
-                      <Divider />
+                      <Divider color={"#4f176a"} />
                     </motion.div>
                   );
                 })}

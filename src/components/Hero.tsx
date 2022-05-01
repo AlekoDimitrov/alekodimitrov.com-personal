@@ -43,12 +43,12 @@ const Hero = () => {
         >
           <h2 className="heroH2">👋,</h2>
           <p className="heroP">
-            I create authentic and functional web applications by tinkering and
-            following current industry principles. I try not to reinvent the
-            wheel on UX, but I do try to add my own twist on every UI I work on.
-            I write about topics I want to reinforce/learn more about. Here,
-            you'll find many things about about web technologies, cryptography,
-            philosophy, economics, etc.
+            Hi there, my name is Aleko, and I like to build web applications.
+            Here, you'll find written summaries about topics I find interesting
+            and would like to learn more about. I'm ususally not specialized in
+            what I write about, but when I want to learn something, I try to
+            explain it. Richard Feynman came up with the method—study, teach,
+            refine, simplify.
           </p>
           <h2 className="heroH2">I ❤️</h2>
           <Box display={"flex"} alignItems={"center"} color="rgb(87, 87, 87)">
