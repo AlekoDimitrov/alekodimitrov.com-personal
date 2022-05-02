@@ -43,7 +43,7 @@ const Hero = () => {
         >
           <h2 className="heroH2">👋,</h2>
           <p className="heroP">
-            Hi there, my name is Aleko, and I like to build web applications.
+            Hi there, my name is Aleko. I like to build web applications.
             Here, you'll find written summaries about topics I find interesting
             and would like to learn more about. I'm ususally not specialized in
             what I write about, but when I want to learn something, I try to

@@ -1,4 +1,4 @@
-import { AppBar, IconButton, Toolbar } from "@mui/material";
+import { AppBar, Button, IconButton, Toolbar } from "@mui/material";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import React from "react";
@@ -6,6 +6,29 @@ import { Box } from "@mui/system";
 import { motion } from "framer-motion";
 import LogoSvg from "!@svgr/webpack!../../public/alekodimitrov-logo.svg";
 import Link from "next/link";
+
+let navbarLinks = [
+  {
+    href: "/",
+    name: "Home",
+  },
+  {
+    href: "/articles",
+    name: "Blog",
+  },
+  {
+    href: "/about",
+    name: "About",
+  },
+  {
+    href: "/projects",
+    name: "Projects",
+  },
+  {
+    href: "/contacts",
+    name: "Contacts",
+  },
+];
 
 const Navbar = (props: any) => {
   const setNavigationState = () => {
@@ -28,7 +51,7 @@ const Navbar = (props: any) => {
           sx={{
             width: "100%",
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "center",
             alignItems: "center",
           }}
         >
@@ -36,7 +59,7 @@ const Navbar = (props: any) => {
             sx={{
               display: "flex",
               alignItems: "center",
-              flex: 1.3,
+              flex: 1,
             }}
           >
             <Link href="/">
@@ -46,21 +69,17 @@ const Navbar = (props: any) => {
             </Link>
           </Box>
           <Box className={"navbarA"}>
-            <a href={"/"} className={"navbarTagText"}>
-              Home
-            </a>
-            <a href={"/articles"} className={"navbarTagText"}>
-              Blog
-            </a>
-            <a href={"/about"} className={"navbarTagText"}>
-              About
-            </a>
-            <a href={"/projects"} className={"navbarTagText"}>
-              Projects
-            </a>
-            <a href={"/contacts"} className={"navbarTagText"}>
-              Contacts
-            </a>
+            {navbarLinks.map((link, key) => {
+              return (
+                <Button
+                  sx={{ textTransform: "none" }}
+                  href={link.href}
+                  key={key}
+                >
+                  <p className={"navbarTagText"}>{link.name}</p>
+                </Button>
+              );
+            })}
           </Box>
           <Box
             onClick={setNavigationState}

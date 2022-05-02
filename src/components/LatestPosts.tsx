@@ -1,6 +1,6 @@
-import { Box, Divider, Link } from "@mui/material";
+import { Box, Button, Divider, Link } from "@mui/material";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import blogsMeta from "../blogData";
 
@@ -10,48 +10,75 @@ const blogVariants = {
   },
   whileHover: {
     scale: 1.01,
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#fbf7fb",
   },
 };
 
 const LatestPosts = () => {
-  let key = 0;
+  const [articles, setArticles] = useState(true);
   return (
     <>
       <Box padding="30px">
         <h2>Latest Posts</h2>
-        {blogsMeta.map((blog) => {
-          key += 1;
-          return (
-            <Link href={blog.slug} underline="none" key={key}>
-              <motion.div
-                className="latestPostsDIV"
-                variants={blogVariants}
-                initial="initial"
-                whileHover="whileHover"
-              >
-                <h3 className="latestPostsTitle">{blog.title}</h3>
-                <Box display={"flex"} justifyContent={"space-between"}>
-                  <p className="latestPostsP">2 months ago</p>
-                  <p className="latestPostsP">2 min read</p>
-                </Box>
-                <p className="latestPostsP">{blog.description}</p>
-              </motion.div>
-            </Link>
-          );
+        {blogsMeta.map((blog, key) => {
+          if (key < 3) {
+            return (
+              <Link href={blog.slug} underline="none" key={key}>
+                <motion.div
+                  className="latestPostsDIV"
+                  variants={blogVariants}
+                  initial="initial"
+                  whileHover="whileHover"
+                >
+                  <h3 className="latestPostsTitle">{blog.title}</h3>
+                  <Box display={"flex"} justifyContent={"space-between"}>
+                    <p className="latestPostsP">2 months ago</p>
+                    <p className="latestPostsP">2 min read</p>
+                  </Box>
+                  <p className="latestPostsP">{blog.description}</p>
+                </motion.div>
+              </Link>
+            );
+          } else if (key < 6 && articles === false) {
+            return (
+              <Link href={blog.slug} underline="none" key={key}>
+                <motion.div
+                  className="latestPostsDIV"
+                  variants={blogVariants}
+                  initial="initial"
+                  whileHover="whileHover"
+                >
+                  <h3 className="latestPostsTitle">{blog.title}</h3>
+                  <Box display={"flex"} justifyContent={"space-between"}>
+                    <p className="latestPostsP">2 months ago</p>
+                    <p className="latestPostsP">2 min read</p>
+                  </Box>
+                  <p className="latestPostsP">{blog.description}</p>
+                </motion.div>
+              </Link>
+            );
+          }
         })}
-
-        <Link href="#" color={"#00000"}>
-          <Box display={"flex"} justifyContent={"flex-end"} padding="10px">
-            <motion.div
-              className="latestPostsMOTIONDIV"
-              whileHover={{ color: "#9c27b0" }}
-            >
-              <p className="readMore">Read More</p>
-              <AiOutlineArrowRight />
-            </motion.div>
-          </Box>
-        </Link>
+        <Box width={"100%"} display={"flex"} justifyContent="flex-end">
+          <Button
+            onClick={() => {
+              setArticles(false);
+            }}
+            href={articles ? "" : "/articles"}
+          >
+            <Box padding="10px">
+              <motion.div
+                className="latestPostsMOTIONDIV"
+                whileHover={{ color: "#9c27b0" }}
+              >
+                <p className="readMore">
+                  {articles ? "Load More" : "Read All"}
+                </p>
+                <AiOutlineArrowRight />
+              </motion.div>
+            </Box>
+          </Button>
+        </Box>
 
         <Divider />
       </Box>
