@@ -19,7 +19,7 @@ const LatestPosts = () => {
   return (
     <>
       <Box padding="30px">
-        <h2>Latest Posts</h2>
+        <h2>Recent Posts</h2>
         {blogsMeta.map((blog, key) => {
           if (key < 3) {
             return (
@@ -79,8 +79,6 @@ const LatestPosts = () => {
             </Box>
           </Button>
         </Box>
-
-        <Divider />
       </Box>
     </>
   );

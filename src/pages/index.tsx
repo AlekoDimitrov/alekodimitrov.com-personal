@@ -13,7 +13,6 @@ const Home: NextPage = () => {
 
       <Hero />
       <LatestPosts />
-      <Footer />
     </>
   );
 };

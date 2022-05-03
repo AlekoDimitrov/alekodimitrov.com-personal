@@ -36,9 +36,9 @@ const Blog = () => {
       <Head>
         <title>Blog | Aleko Dimitrov</title>
       </Head>
-      <Typography variant="h1">Blog</Typography>
-      <Typography variant="body2" mb={4}>
-        The magic happens here.
+      <Typography variant="h3">Blog</Typography>
+      <Typography variant="body1" mb={4}>
+        Everything I've writtern
       </Typography>
       <TextField
         id="standard-basic"

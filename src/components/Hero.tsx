@@ -19,7 +19,7 @@ const Hero = () => {
               justifyContent: { sm: "center" },
             }}
           >
-            <Typography variant="h1">Aleko Dimitrov,</Typography>
+            <Typography variant="h3">Aleko Dimitrov,</Typography>
             <Typography variant="body1">developer for the web.</Typography>
           </Box>
           <Avatar
@@ -43,12 +43,12 @@ const Hero = () => {
         >
           <h2 className="heroH2">👋,</h2>
           <p className="heroP">
-            Hi there, my name is Aleko. I like to build web applications.
-            Here, you'll find written summaries about topics I find interesting
-            and would like to learn more about. I'm ususally not specialized in
-            what I write about, but when I want to learn something, I try to
-            explain it. Richard Feynman came up with the method—study, teach,
-            refine, simplify.
+            Hi there, my name is Aleko. I like to build web applications. Here,
+            you'll find written summaries about topics I find interesting and
+            would like to learn more about. I'm ususally not specialized in what
+            I write about, but when I want to learn something, I try to explain
+            it. Richard Feynman came up with the method—study, teach, refine,
+            simplify.
           </p>
           <h2 className="heroH2">I ❤️</h2>
           <Box display={"flex"} alignItems={"center"} color="rgb(87, 87, 87)">

@@ -7,6 +7,7 @@ import MobileNavigation from "../components/MobileNavigation";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { createTheme, ThemeProvider } from "@mui/material";
+import Footer from "../components/Footer";
 
 const theme = createTheme({
   palette: {
@@ -19,7 +20,7 @@ const theme = createTheme({
   },
 });
 
-theme.typography.h1 = {
+theme.typography.h3 = {
   fontSize: "2.2rem",
   [theme.breakpoints.up("sm")]: {
     fontSize: "2.4rem",
@@ -80,6 +81,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               {mobileNavigation === true && <MobileNavigation />}
             </AnimatePresence>
             <Component {...pageProps} />
+            <Footer />
           </Box>
         </Box>
       </ThemeProvider>
