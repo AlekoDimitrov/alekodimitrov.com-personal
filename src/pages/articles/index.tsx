@@ -9,6 +9,7 @@ import React, { useState } from "react";
 import blogsMeta from "../../blogData";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import Moment from "react-moment";
 
 const blogVariants = {
   initial: {
@@ -72,7 +73,9 @@ const Blog = () => {
               >
                 <h3 className="latestPostsTitle">{blog.title}</h3>
                 <Box display={"flex"} justifyContent={"space-between"}>
-                  <p className="latestPostsP">2 months ago</p>
+                  <p className="latestPostsP">
+                    <Moment fromNow>{blog.date}</Moment>
+                  </p>
                   <p className="latestPostsP">2 min read</p>
                 </Box>
                 <p className="latestPostsP">{blog.description}</p>

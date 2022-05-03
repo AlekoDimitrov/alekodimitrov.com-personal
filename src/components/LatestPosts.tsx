@@ -2,6 +2,7 @@ import { Box, Button, Divider, Link } from "@mui/material";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Moment from "react-moment";
 import blogsMeta from "../blogData";
 
 const blogVariants = {
@@ -32,7 +33,9 @@ const LatestPosts = () => {
                 >
                   <h3 className="latestPostsTitle">{blog.title}</h3>
                   <Box display={"flex"} justifyContent={"space-between"}>
-                    <p className="latestPostsP">2 months ago</p>
+                    <p className="latestPostsP">
+                      <Moment fromNow>{blog.date}</Moment>
+                    </p>
                     <p className="latestPostsP">2 min read</p>
                   </Box>
                   <p className="latestPostsP">{blog.description}</p>
@@ -50,7 +53,9 @@ const LatestPosts = () => {
                 >
                   <h3 className="latestPostsTitle">{blog.title}</h3>
                   <Box display={"flex"} justifyContent={"space-between"}>
-                    <p className="latestPostsP">2 months ago</p>
+                    <p className="latestPostsP">
+                      <Moment>{blog.date}</Moment>
+                    </p>
                     <p className="latestPostsP">2 min read</p>
                   </Box>
                   <p className="latestPostsP">{blog.description}</p>

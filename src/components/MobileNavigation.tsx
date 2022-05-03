@@ -6,7 +6,6 @@ const mobileNavLinks = [
   { id: 1, href: "/", text: "Home" },
   { id: 2, href: "/articles", text: "Blog" },
   { id: 3, href: "/about", text: "About" },
-  { id: 4, href: "/projects", text: "Projects" },
   { id: 5, href: "/contacts", text: "Contacts" },
 ];
 

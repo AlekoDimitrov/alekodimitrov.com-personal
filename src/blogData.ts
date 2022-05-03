@@ -1,62 +1,14 @@
 export default [
   {
-    date: "",
-    slug: "sampleBlog",
+    date: "2022-04-30 13:08",
+    slug: "/articles/sampleBlog",
     title: "Sample Blog",
     description: "Lorem Ipsum",
   },
   {
-    date: "",
-    slug: "sampleBogle",
+    date: "2022-05-02 13:08",
+    slug: "/articles/sampleBogle",
     title: "Sample Bogle",
     description: "Lorem Ipsum Lorem Ipsum",
-  },
-  {
-    date: "",
-    slug: "jackGoogle",
-    title: "Jack Golum",
-    description: "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-  },
-  {
-    date: "",
-    slug: "jackGoogle",
-    title: "Jack Golum",
-    description: "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-  },
-  {
-    date: "",
-    slug: "jackGoogle",
-    title: "Jack Golum",
-    description: "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-  },
-  {
-    date: "",
-    slug: "jackGoogle",
-    title: "Jack Golum",
-    description: "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-  },
-  {
-    date: "",
-    slug: "jackGoogle",
-    title: "Jack Golum",
-    description: "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-  },
-  {
-    date: "",
-    slug: "jackGoogle",
-    title: "Jack Golum",
-    description: "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-  },
-  {
-    date: "",
-    slug: "jackGoogle",
-    title: "Jack Golum",
-    description: "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
-  },
-  {
-    date: "",
-    slug: "jackGoogle",
-    title: "Jack Golum",
-    description: "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
   },
 ];

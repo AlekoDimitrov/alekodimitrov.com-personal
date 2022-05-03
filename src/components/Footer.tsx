@@ -44,16 +44,6 @@ const Footer = () => {
               underline={"none"}
               fontSize={"small"}
             >
-              Projects
-            </Link>
-          </ListItem>
-          <ListItem className="footerListItems">
-            <Link
-              href="#"
-              color={"#00000"}
-              underline={"none"}
-              fontSize={"small"}
-            >
               Github
             </Link>
           </ListItem>

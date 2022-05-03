@@ -20,10 +20,7 @@ let navbarLinks = [
     href: "/about",
     name: "About",
   },
-  {
-    href: "/projects",
-    name: "Projects",
-  },
+
   {
     href: "/contacts",
     name: "Contacts",
