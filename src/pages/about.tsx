@@ -22,12 +22,12 @@ const about = () => {
         <Typography variant="body2" mt={2} mb={6}>
           My web development journey began in 2017 when I had to figure out what
           I was gonna do for a living. I did it on and off for a couple of
-          years. By the end of 2021, I had developed my affinity for solving
+          years. By the end of 2021, I had developed my love for solving
           problems. The more I grew, the better I understood how valuable a good
-          software developer is. Now I'm here, creating things and having fun. I
-          don't think I'll ever turn back. <br /> <br /> My dream is to reach
-          the peak of every necessary skill required to be an indispensable part
-          of every tech team.
+          software developer is. Now I&apos;m here, creating things and having
+          fun. I don&apos;t think I&apos;ll ever turn back. <br /> <br /> My
+          dream is to reach the peak of every necessary skill required to be an
+          indispensable part of every tech team.
         </Typography>
         <Divider />
         <Typography variant="h3" mt={6}>

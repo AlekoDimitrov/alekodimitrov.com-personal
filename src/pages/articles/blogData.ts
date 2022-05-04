@@ -1,4 +1,4 @@
-export default [
+export const blogsMeta = [
   {
     date: "2022-04-30 13:08",
     slug: "/articles/sampleBlog",
