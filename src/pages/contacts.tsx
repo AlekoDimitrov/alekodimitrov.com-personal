@@ -48,6 +48,7 @@ const contacts = () => {
           <a href="mailto:dimitrovaleko@gmail.com"> dimitrovaleko@gmail.com</a>
         </Typography>
 
+<<<<<<< HEAD
         <Box padding={{ sm: 10 }} mt={{ xs: 4 }}>
           <form ref={form} onSubmit={sendEmail} className="contactsForm">
             <label className="contactsLables">Name</label>
@@ -73,6 +74,18 @@ const contacts = () => {
               className="contactsTextField"
               required
             />
+=======
+        <Box padding={10}>
+          <form ref={form} onSubmit={sendEmail} className="contactsForm">
+            <label className="contactsLables">Name</label>
+            <Input type="text" name="user_name" required />
+
+            <label className="contactsLables">Email</label>
+            <Input type="email" name="user_email" required />
+
+            <label className="contactsLables contactsMessage"></label>
+            <TextField multiline name="message" required />
+>>>>>>> 9af82c4c53326b1508d8167af1a1801278646156
 
             <Input
               type="submit"
