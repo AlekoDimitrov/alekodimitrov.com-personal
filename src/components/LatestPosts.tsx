@@ -3,7 +3,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Moment from "react-moment";
-import blogsMeta from "../blogData";
+import blogsMeta from "../pages/articles/blogData";
 
 const blogVariants = {
   initial: {

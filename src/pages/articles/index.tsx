@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-import blogsMeta from "../../blogData";
+import blogsMeta from "./blogData";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Moment from "react-moment";

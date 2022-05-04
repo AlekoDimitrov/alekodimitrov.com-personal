@@ -10,6 +10,7 @@
     "svg": "svgr -d ./public/static/icons/ ./public/static/icons/"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@fontsource/roboto": "^4.5.5",
