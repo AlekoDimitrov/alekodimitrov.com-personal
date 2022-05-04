@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Box } from "@mui/system";
-import { Input, Typography } from "@mui/material";
-import { motion, AnimatePresence } from "framer-motion";
+import { Input, TextField, Typography } from "@mui/material";
+import { motion } from "framer-motion";
+import { cursorTo } from "readline";
 
 const contacts = () => {
   const [sent, setSent] = useState(false);
@@ -43,18 +44,27 @@ const contacts = () => {
         }}
       >
         <Typography variant="h3">Get in Touch</Typography>
+        <Typography variant="body2" sx={{ color: "#6C3D83" }}>
+          <a href="mailto:dimitrovaleko@gmail.com"> dimitrovaleko@gmail.com</a>
+        </Typography>
+
         <Box padding={10}>
           <form ref={form} onSubmit={sendEmail} className="contactsForm">
             <label className="contactsLables">Name</label>
-            <Input type="text" name="user_name" />
+            <Input type="text" name="user_name" required />
 
             <label className="contactsLables">Email</label>
-            <Input type="email" name="user_email" />
+            <Input type="email" name="user_email" required />
 
-            <label className="contactsLables contactsMessage">Message</label>
-            <textarea name="message" className="contactsInput" />
+            <label className="contactsLables contactsMessage"></label>
+            <TextField multiline name="message" required />
 
-            <Input type="submit" value="SEND" className="contactsInputButton" />
+            <Input
+              type="submit"
+              value="SEND"
+              className="contactsInputButton"
+              sx={{ color: "#6C3D83" }}
+            />
           </form>
         </Box>
         <Box display={"flex"} justifyContent="center">
