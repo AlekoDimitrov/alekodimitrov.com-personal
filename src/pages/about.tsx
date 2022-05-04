@@ -21,13 +21,13 @@ const about = () => {
         <Typography variant="h3">About me 👨‍🦲</Typography>
         <Typography variant="body2" mt={2} mb={6}>
           My web development journey began in 2017 when I had to figure out what
-          I was gonna do for a living. I did it on and off for a couple of years
-          until I found my way into obsession. By the end of 2021, I had
-          developed my affinity for solving problems. The more I grew, the
-          better I understood how valuable a good software developer is. Now I'm
-          here, creating things and having fun. I don't think I'll ever turn
-          back. <br /> <br /> My dream is to reach the peak of every necessary
-          skill required to be an indispensable part of every tech team.
+          I was gonna do for a living. I did it on and off for a couple of
+          years. By the end of 2021, I had developed my affinity for solving
+          problems. The more I grew, the better I understood how valuable a good
+          software developer is. Now I'm here, creating things and having fun. I
+          don't think I'll ever turn back. <br /> <br /> My dream is to reach
+          the peak of every necessary skill required to be an indispensable part
+          of every tech team.
         </Typography>
         <Divider />
         <Typography variant="h3" mt={6}>
@@ -38,18 +38,18 @@ const about = () => {
             (JavaScript, React, Next.js, Node.js, Python)
           </Typography>
           <Typography variant="body1">
-            My interests lie within the JavaScript + TypeScript ecosystem. I
+            My interests are within the JavaScript + TypeScript ecosystem. I
             love to work with React and Next.js.
           </Typography>
           <Typography variant="body2" mt={2}>
-            I always strive to write clean and functional code first. The bloat
-            and inefficiencies, I trim down later.
+            I always strive to write clean, functional code and inefficiencies
+            are never overlooked.
           </Typography>
           <Typography variant="body2" mt={2}>
             Aside from coding, I enjoy learning and growing my skills through
             active engagement. I read, write and do everything that leads me
-            closer to proficiency. I believe that only through the mastery of a
-            craft can a person ever achieve anything worth sharing.
+            closer to proficiency. I believe that only through mastery of crafts
+            can a person ever achieve anything worth sharing.
           </Typography>
         </Box>
       </Box>

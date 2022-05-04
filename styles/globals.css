@@ -139,9 +139,13 @@ p {
   margin-top: 40px;
 }
 .contactsInput {
-  border: 1px solid #781e86;
-  font-size: 15px;
-  height: 120px;
+  background-color: rgba(228, 228, 228, 0.377);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 8px;
+}
+.contactsTextField {
+  background-color: rgba(228, 228, 228, 0.377);
 }
 .contactsInputButton {
   margin: 25px auto 0;
