@@ -1,6 +1,7 @@
 import { Box, Divider, Typography } from "@mui/material";
 import Head from "next/head";
 import React from "react";
+import ContactForm from "../components/ContactForm";
 
 const about = () => {
   return (
