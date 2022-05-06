@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Hero from "../components/Hero";
 import LatestPosts from "../components/LatestPosts";
-import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (

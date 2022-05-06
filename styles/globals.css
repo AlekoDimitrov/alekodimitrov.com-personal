@@ -28,13 +28,8 @@ p {
 }
 
 .heroH2 {
-  border-style: solid;
-  border-right: none;
-  border-left: none;
-  border-top: none;
-  border-bottom: 4px solid;
-  border-image: linear-gradient(to right, rgb(73, 73, 170), #9c27b0) 1;
-  max-width: fit-content;
+  margin-bottom: 0;
+  width: fit-content;
 }
 
 .heroH4 {
@@ -74,16 +69,7 @@ p {
 }
 
 .footerListItems {
-  padding: 0;
   margin-bottom: 20px;
-}
-
-.appBar {
-  max-width: 768px;
-  left: 50%;
-  right: 50%;
-  transform: translateX(-50%);
-  filter: drop-shadow(0px 2px 10px #0000004d);
 }
 
 .logoSvg {
@@ -92,8 +78,8 @@ p {
 }
 
 .navbarTagText {
-  font-size: 16px;
-  color: rgb(82, 82, 82);
+  /* font-size: 16px;
+  color: rgb(32, 32, 32); */
 }
 
 .navbarA {
@@ -117,11 +103,14 @@ p {
   .logoSvg {
     transform: scale(1.3);
     margin-top: 15px;
-    fill: black;
+    fill: rgb(24, 24, 24);
   }
   .navbarA {
     display: flex;
     justify-content: space-between;
+  }
+  .navbarIconButton {
+    background-color: #5d176a;
   }
   .heroP {
     font-size: 1rem;
@@ -141,8 +130,7 @@ p {
 }
 .contactsInput {
   background-color: rgba(228, 228, 228, 0.377);
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-radius: 5px;
   padding: 8px;
 }
 .contactsTextField {
@@ -151,4 +139,9 @@ p {
 .contactsInputButton {
   margin: 25px auto 0;
   font-size: 18px;
+}
+.mobileNavigationButton {
+  border: none;
+  color: white;
+  background-color: transparent;
 }

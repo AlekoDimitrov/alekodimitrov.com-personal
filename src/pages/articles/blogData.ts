@@ -11,4 +11,40 @@ export const blogsMeta = [
     title: "Sample Bogle",
     description: "Lorem Ipsum Lorem Ipsum",
   },
+  {
+    date: "2022-05-02 13:08",
+    slug: "/articles/sampleBogle",
+    title: "Sample Bogle",
+    description: "Lorem Ipsum Lorem Ipsum",
+  },
+  {
+    date: "2022-05-02 13:08",
+    slug: "/articles/sampleBogle",
+    title: "Sample Bogle",
+    description: "Lorem Ipsum Lorem Ipsum",
+  },
+  {
+    date: "2022-05-02 13:08",
+    slug: "/articles/sampleBogle",
+    title: "Sample Bogle",
+    description: "Lorem Ipsum Lorem Ipsum",
+  },
+  {
+    date: "2022-05-01 13:08",
+    slug: "/articles/sampleBogle",
+    title: "Sample DOGGGLE",
+    description: "Lorem Ipsum Lorem Ipsum",
+  },
+  {
+    date: "2022-05-02 13:08",
+    slug: "/articles/sampleBogle",
+    title: "Sample Bogle",
+    description: "Lorem Ipsum Lorem Ipsum",
+  },
+  {
+    date: "2022-05-02 13:08",
+    slug: "/articles/sampleBogle",
+    title: "Sample Bogle",
+    description: "Lorem Ipsum Lorem Ipsum",
+  },
 ];

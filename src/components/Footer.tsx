@@ -1,5 +1,14 @@
-import { Box, Divider, Link, List, ListItem } from "@mui/material";
+import { Box, Divider, List, ListItem, Typography } from "@mui/material";
+import Link from "next/link";
 import React from "react";
+
+const footerLinks = [
+  { text: "Home", href: "/" },
+  { text: "Blog", href: "/articles" },
+  { text: "About", href: "/about" },
+  { text: "Contacts", href: "/contacts" },
+  { text: "Github", href: "https://github.com/AlekoDimitrov" },
+];
 
 const Footer = () => {
   return (
@@ -7,56 +16,21 @@ const Footer = () => {
       <Divider />
       <Box padding={"24px"}>
         <List>
-          <ListItem className="footerListItems">
-            <Link
-              href="#"
-              color={"#00000"}
-              underline={"none"}
-              fontSize={"small"}
-            >
-              Home
-            </Link>
-          </ListItem>
-          <ListItem className="footerListItems">
-            <Link
-              href="#"
-              color={"#00000"}
-              underline={"none"}
-              fontSize={"small"}
-            >
-              Blog
-            </Link>
-          </ListItem>
-          <ListItem className="footerListItems">
-            <Link
-              href="#"
-              color={"#00000"}
-              underline={"none"}
-              fontSize={"small"}
-            >
-              About
-            </Link>
-          </ListItem>
-          <ListItem className="footerListItems">
-            <Link
-              href="#"
-              color={"#00000"}
-              underline={"none"}
-              fontSize={"small"}
-            >
-              Github
-            </Link>
-          </ListItem>
-          <ListItem className="footerListItems">
-            <Link
-              href="#"
-              color={"#00000"}
-              underline={"none"}
-              fontSize={"small"}
-            >
-              Contacts
-            </Link>
-          </ListItem>
+          {footerLinks.map((link, key) => {
+            return (
+              <ListItem
+                className="footerListItems"
+                key={key}
+                sx={{ padding: 0 }}
+              >
+                <Link href={link.href}>
+                  <a>
+                    <Typography variant="caption">{link.text}</Typography>
+                  </a>
+                </Link>
+              </ListItem>
+            );
+          })}
         </List>
       </Box>
     </>

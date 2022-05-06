@@ -1,12 +1,13 @@
-import { Box, Divider, Link, ListItem } from "@mui/material";
+import { Box, Divider, ListItem, Typography } from "@mui/material";
+import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 
 const mobileNavLinks = [
-  { id: 1, href: "/", text: "Home" },
-  { id: 2, href: "/articles", text: "Blog" },
-  { id: 3, href: "/about", text: "About" },
-  { id: 5, href: "/contacts", text: "Contacts" },
+  { href: "/", text: "Home" },
+  { href: "/articles", text: "Blog" },
+  { href: "/about", text: "About" },
+  { href: "/contacts", text: "Contacts" },
 ];
 
 const variants = {
@@ -31,6 +32,10 @@ const childVariants = {
 };
 
 const MobileNavigation = (props: any) => {
+  const setNavigationState = () => {
+    props.mobileNavigation === true && props.setMobileNavigation(false);
+  };
+
   return (
     <Box>
       <Box
@@ -59,17 +64,27 @@ const MobileNavigation = (props: any) => {
             <Box
               sx={{
                 color: "whitesmoke",
-                height: "60%",
+                height: "70%",
                 width: "80%",
               }}
             >
               <ul>
-                {mobileNavLinks.map((link) => {
+                {mobileNavLinks.map((link, key) => {
                   return (
-                    <motion.div key={link.id} variants={childVariants}>
+                    <motion.div key={key} variants={childVariants}>
                       <ListItem>
-                        <Link href={link.href} underline="none" color={"#ffff"}>
-                          <h4>{link.text}</h4>
+                        <Link href={link.href} passHref>
+                          <button
+                            onClick={setNavigationState}
+                            className={"mobileNavigationButton"}
+                          >
+                            <Typography
+                              variant="h6"
+                              sx={{ fontWeight: "700", marginTop: 5 }}
+                            >
+                              {link.text}
+                            </Typography>
+                          </button>
                         </Link>
                       </ListItem>
                       <Divider color={"#4f176a"} />

@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -41,20 +42,69 @@ const Hero = () => {
             borderRadius: 5,
           }}
         >
-          <h2 className="heroH2">👋,</h2>
+          <Box display={"flex"}>
+            <motion.h2
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 20 }}
+              transition={{ duration: 0.3, yoyo: "Infinity" }}
+              className="heroH2"
+            >
+              👋
+            </motion.h2>
+            <h2 className="heroH2">,</h2>
+          </Box>
+
+          <Box
+            sx={{
+              borderStyle: "none",
+              borderRight: "none",
+              borderLeft: "none",
+              borderTop: "none",
+              borderBottom: "4px solid",
+              borderImage:
+                "linear-gradient(to right, rgb(73, 73, 170), #9c27b0) 1",
+              width: "36.5px",
+              marginBlockEnd: "0.83em",
+            }}
+          ></Box>
           <p className="heroP">
-            Hi there, my name is Aleko. I like to build web applications. Here,
-            you&apos;ll find written summaries about topics I find interesting
-            and would like to learn more about. I&apos;m ususally not
-            specialized in what I write about, but when I want to learn
-            something, I try to explain it. Richard Feynman came up with the
-            method—study, teach, refine, simplify.
+            Welcome, I&apos;m glad you&apos;re here! In my blog, you&apos;ll
+            find posts about everything I find interesting. I mostly write about
+            topics I lack knowledge in, but then there are some that I know a
+            bit more about. <br /> Richard Feynman came up with the
+            method—study, teach, refine, and simplify. This blog was made with
+            the &quot;teach, refine, and simplify&quot; part of his method in
+            mind.
           </p>
-          <h2 className="heroH2">I ❤️</h2>
+          <Box display={"flex"}>
+            <h2 className="heroH2">I</h2>
+            <motion.h2
+              initial={{ scale: 0.6 }}
+              animate={{ scale: 0.8 }}
+              transition={{ duration: 0.3, yoyo: "Infinity" }}
+              className="heroH2"
+            >
+              ❤️
+            </motion.h2>
+          </Box>
+
+          <Box
+            sx={{
+              borderStyle: "none",
+              borderRight: "none",
+              borderLeft: "none",
+              borderTop: "none",
+              borderBottom: "4px solid",
+              borderImage:
+                "linear-gradient(to right, rgb(73, 73, 170), #9c27b0) 1",
+              width: "33px",
+              marginBlockEnd: "0.83em",
+            }}
+          ></Box>
           <Box display={"flex"} alignItems={"center"} color="rgb(87, 87, 87)">
             <p className="heroH4">
               Next.js, React, Linux, FOSS, zero-knowledge, DeFi, Monero,
-              Personal Finance (FIRE in 🇪🇺)
+              Personal Finance (FIRE 🇪🇺)
             </p>
           </Box>
         </Box>

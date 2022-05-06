@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Moment from "react-moment";
 import { blogsMeta } from "../pages/articles/blogData";
+import BlogSnippet from "./BlogSnippet";
 
 const blogVariants = {
   initial: {
@@ -23,44 +24,17 @@ const LatestPosts = () => {
         <h2>Recent Posts</h2>
         {blogsMeta.map((blog, key) => {
           if (key < 3) {
-            return (
-              <Link href={blog.slug} underline="none" key={key}>
-                <motion.div
-                  className="latestPostsDIV"
-                  variants={blogVariants}
-                  initial="initial"
-                  whileHover="whileHover"
-                >
-                  <h3 className="latestPostsTitle">{blog.title}</h3>
-                  <Box display={"flex"} justifyContent={"space-between"}>
-                    <p className="latestPostsP">
-                      <Moment fromNow>{blog.date}</Moment>
-                    </p>
-                    <p className="latestPostsP">2 min read</p>
-                  </Box>
-                  <p className="latestPostsP">{blog.description}</p>
-                </motion.div>
-              </Link>
-            );
+            return <BlogSnippet blogMeta={blog} key={key} />;
           } else if (key < 6 && articles === false) {
             return (
-              <Link href={blog.slug} underline="none" key={key}>
-                <motion.div
-                  className="latestPostsDIV"
-                  variants={blogVariants}
-                  initial="initial"
-                  whileHover="whileHover"
-                >
-                  <h3 className="latestPostsTitle">{blog.title}</h3>
-                  <Box display={"flex"} justifyContent={"space-between"}>
-                    <p className="latestPostsP">
-                      <Moment>{blog.date}</Moment>
-                    </p>
-                    <p className="latestPostsP">2 min read</p>
-                  </Box>
-                  <p className="latestPostsP">{blog.description}</p>
-                </motion.div>
-              </Link>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: key * 0.1 }}
+                key={key}
+              >
+                <BlogSnippet blogMeta={blog} />
+              </motion.div>
             );
           }
         })}

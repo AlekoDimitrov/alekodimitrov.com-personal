@@ -10,6 +10,7 @@ import { blogsMeta } from "./blogData";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Moment from "react-moment";
+import BlogSnippet from "../../components/BlogSnippet";
 
 const blogVariants = {
   initial: {
@@ -63,25 +64,7 @@ const Blog = () => {
           }
         })
         .map((blog, key) => {
-          return (
-            <Link href={blog.slug} underline="none" key={key}>
-              <motion.div
-                className="latestPostsDIV"
-                variants={blogVariants}
-                initial="initial"
-                whileHover="whileHover"
-              >
-                <h3 className="latestPostsTitle">{blog.title}</h3>
-                <Box display={"flex"} justifyContent={"space-between"}>
-                  <p className="latestPostsP">
-                    <Moment fromNow>{blog.date}</Moment>
-                  </p>
-                  <p className="latestPostsP">2 min read</p>
-                </Box>
-                <p className="latestPostsP">{blog.description}</p>
-              </motion.div>
-            </Link>
-          );
+          return <BlogSnippet blogMeta={blog} key={key} />;
         })}
     </Box>
   );

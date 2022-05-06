@@ -78,7 +78,12 @@ function MyApp({ Component, pageProps }: AppProps) {
               mobileNavigation={mobileNavigation}
             />
             <AnimatePresence>
-              {mobileNavigation === true && <MobileNavigation />}
+              {mobileNavigation === true && (
+                <MobileNavigation
+                  mobileNavigation={mobileNavigation}
+                  setMobileNavigation={setMobileNavigation}
+                />
+              )}
             </AnimatePresence>
             <Component {...pageProps} />
             <Footer />

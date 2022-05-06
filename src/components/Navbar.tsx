@@ -1,8 +1,16 @@
-import { AppBar, Button, IconButton, Toolbar } from "@mui/material";
+import {
+  AppBar,
+  Button,
+  IconButton,
+  ListItem,
+  ListItemText,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import React from "react";
-import { Box } from "@mui/system";
+import Box from "@mui/material/Box";
 import { motion } from "framer-motion";
 import LogoSvg from "!@svgr/webpack!../../public/alekodimitrov-logo.svg";
 import Link from "next/link";
@@ -35,12 +43,16 @@ const Navbar = (props: any) => {
   };
   return (
     <AppBar
-      className="appBar"
       color="transparent"
       elevation={0}
       sx={{
         position: { sm: "absolute" },
         backgroundColor: { sm: "transparent", xs: "#5d176a" },
+        maxWidth: "768px",
+        left: "50%",
+        right: "50%",
+        transform: "translateX(-50%)",
+        filter: { xs: "drop-shadow(0px 2px 10px #0000004d)", sm: "none" },
       }}
     >
       <Toolbar>
@@ -68,13 +80,27 @@ const Navbar = (props: any) => {
           <Box className={"navbarA"}>
             {navbarLinks.map((link, key) => {
               return (
-                <Button
-                  sx={{ textTransform: "none" }}
-                  href={link.href}
+                <motion.div
+                  initial={{ backgroundColor: "#ffff" }}
+                  whileHover={{
+                    borderRadius: 7,
+                    backgroundColor: "#f8f1f9",
+                    transition: { duration: 0.3 },
+                  }}
                   key={key}
                 >
-                  <p className={"navbarTagText"}>{link.name}</p>
-                </Button>
+                  <Link href={link.href} passHref>
+                    <a>
+                      <ListItem
+                        sx={{ maxWidth: "fit-content", borderRadius: 2 }}
+                      >
+                        <Typography variant="caption" fontSize="16px">
+                          {link.name}
+                        </Typography>
+                      </ListItem>
+                    </a>
+                  </Link>
+                </motion.div>
               );
             })}
           </Box>
@@ -89,7 +115,11 @@ const Navbar = (props: any) => {
                 opacity: 0.5,
               }}
             >
-              <IconButton color="inherit" aria-label="menu">
+              <IconButton
+                color="inherit"
+                aria-label="menu"
+                className="navbarIconButton"
+              >
                 {props.mobileNavigation ? (
                   <IoClose color="white" />
                 ) : (

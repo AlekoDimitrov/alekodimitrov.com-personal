@@ -46,7 +46,6 @@ const ContactForm = () => {
         <Typography variant="body2" sx={{ color: "#6C3D83" }}>
           <a href="mailto:dimitrovaleko@gmail.com"> dimitrovaleko@gmail.com</a>
         </Typography>
-
         <Box padding={{ sm: 10 }} mt={{ xs: 4 }}>
           <form onSubmit={sendEmail} className="contactsForm">
             <label className="contactsLables">Name</label>
@@ -86,7 +85,7 @@ const ContactForm = () => {
             <motion.p
               initial={{ opacity: 0, color: "#6C3D83" }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.5 }}
             >
               Sent Successfully
             </motion.p>
