@@ -75,13 +75,8 @@ const about = () => {
             Aside from coding, I enjoy learning and growing my skilset through
             active engagement (hence the blog). I read, write and do everything
             that makes me more proficient in a given field. I like to believe
-<<<<<<< HEAD
             that through mastery, a person can best achieve what&apos;s both
             great and worth sharing.
-=======
-            that through mastery, a person can best achieve what's both great
-            and worth sharing.
->>>>>>> 62b61f1def15c54946df8a1ff4156e4e603f56aa
           </Typography>
         </Box>
       </Box>
