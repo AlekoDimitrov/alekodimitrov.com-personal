@@ -68,13 +68,10 @@ const Hero = () => {
             }}
           ></Box>
           <p className="heroP">
-            Welcome, I&apos;m glad you&apos;re here! In my blog, you&apos;ll
-            find posts about everything I find interesting. I mostly write about
-            topics I lack knowledge in, but then there are some that I know a
-            bit more about. <br /> Richard Feynman came up with the
-            method—study, teach, refine, and simplify. This blog was made with
-            the &quot;teach, refine, and simplify&quot; part of his method in
-            mind.
+            Hi there, my name is Aleko, and this is my personal website. Here
+            you can find articles about everything from web development to
+            personal finance. If I'm interested in it, I'll usually write about
+            it. Hope you find some value while you're here.
           </p>
           <Box display={"flex"}>
             <h2 className="heroH2">I</h2>
@@ -103,8 +100,8 @@ const Hero = () => {
           ></Box>
           <Box display={"flex"} alignItems={"center"} color="rgb(87, 87, 87)">
             <p className="heroH4">
-              Next.js, React, Linux, FOSS, zero-knowledge, DeFi, Monero,
-              Personal Finance (FIRE 🇪🇺)
+              Next.js, React, Linux, FOSS, Personal Finance (FIRE 🇪🇺),
+              Blockchain, and more.
             </p>
           </Box>
         </Box>
