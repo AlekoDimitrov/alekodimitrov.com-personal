@@ -80,7 +80,7 @@ const ContactForm = () => {
             />
           </form>
         </Box>
-        <Box display={"flex"} justifyContent="center">
+        <Box display={"flex"} justifyContent="center" mt={{ xs: 2 }}>
           {sent && (
             <motion.p
               initial={{ opacity: 0, color: "#6C3D83" }}
