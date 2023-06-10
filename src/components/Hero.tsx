@@ -68,7 +68,7 @@ const Hero = () => {
             }}
           ></Box>
           <p className="heroP">
-            Welcome to my personal website! I'm Aleko, and I'm thrilled to have you here. This platform is a reflection of my diverse interests and a space where I share articles on topics ranging from web development to personal finance. If something piques my curiosity, you can expect to find my thoughts and insights on it.
+            Welcome to my personal website! I&apos;m Aleko, and I&apos;m thrilled to have you here. This platform is a reflection of my diverse interests and a space where I share articles on topics ranging from web development to personal finance. If something piques my curiosity, you can expect to find my thoughts and insights on it.
           </p>
           <Box display={"flex"}>
             <h2 className="heroH2">I</h2>
