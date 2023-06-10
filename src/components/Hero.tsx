@@ -21,7 +21,7 @@ const Hero = () => {
             }}
           >
             <Typography variant="h3">Aleko Dimitrov,</Typography>
-            <Typography variant="body1">developer for the web.</Typography>
+            <Typography variant="body1">Developer of the web.</Typography>
           </Box>
           <Avatar
             alt="Aleko Dimitrov"
@@ -68,10 +68,7 @@ const Hero = () => {
             }}
           ></Box>
           <p className="heroP">
-            Hi there, my name is Aleko, and this is my personal website. Here
-            you can find articles about everything from web development to
-            personal finance. If I&apos;m interested in it, I&apos;ll usually
-            write about it. Hope you find some value while you&apos;re here.
+            Welcome to my personal website! I'm Aleko, and I'm thrilled to have you here. This platform is a reflection of my diverse interests and a space where I share articles on topics ranging from web development to personal finance. If something piques my curiosity, you can expect to find my thoughts and insights on it.
           </p>
           <Box display={"flex"}>
             <h2 className="heroH2">I</h2>
@@ -100,7 +97,7 @@ const Hero = () => {
           ></Box>
           <Box display={"flex"} alignItems={"center"} color="rgb(87, 87, 87)">
             <p className="heroH4">
-              Next.js, React, Linux, FOSS, Personal Finance (FIRE 🇪🇺),
+              Next.js, React, Linux, FOSS, Personal Finance,
               Blockchain, and more.
             </p>
           </Box>
