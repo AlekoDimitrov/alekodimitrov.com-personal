@@ -22,13 +22,9 @@ const about = () => {
         <Typography variant="body2" mt={2} mb={6}>
           My web journey began in 2017 when I was still figuring out what
           digital skills I wanted to focus on. I was learning web development on
-          and off for a couple of years. By the end of 2021, I had found my love
-          for solving problems. The older I got, the more I understood how
-          valuable a good software developer is, and so I began to head in that
-          direction. Now I&apos;m somewhere on the path, and I don&apos;t think
-          I&apos;ll ever turn back. <br /> <br />
-          My dream is to reach the pinnacle of every skill required to be an
-          indispensable part of a team.
+          and off for a couple of years and by the end of 2021, I had found my love
+          for solving web problems. The more I learned, the more I understood how
+          valuable a good software developer is. Now, my goal is to become one.
         </Typography>
         <Divider />
         <Typography variant="h3" mt={6}>
@@ -63,18 +59,16 @@ const about = () => {
             >
               CodeWars
             </Link>
-            . Most of the time, I use JavaScript, but depending on the mood, I
-            might throw in some Python. JS is the language I enjoy tinkering
-            with, but sometimes it bothers me for being the #1 reason causing a
-            slower web. That is also why I&apos;d love to work on improving
-            efficiency within my code. There is a lot of bloat JS code running
-            behind the scenes on many websites, making them heavy and causing
-            bad UX.
+            . Most of the time, I use JavaScript, but depending on what I&apos;m trying
+            to learn, I migh use other languages. I chose JavaScript because I&apos;m
+            bothered that this is the #1 reason causing a bloated web.
+            That is also why I&apos;d love to work on improving
+            efficiency within my own code. There are lots of inefficiencies caused by JS,
+            making websites run slower, resulting in bad UX.
           </Typography>
           <Typography variant="body2" mt={2}>
             Aside from coding, I enjoy learning and growing my skilset through
-            active engagement (hence the blog). I read, write and do everything
-            that makes me more proficient in a given field. I like to believe
+            active engagement with community and colleagues. I like to believe
             that through mastery, a person can best achieve what&apos;s both
             great and worth sharing.
           </Typography>
